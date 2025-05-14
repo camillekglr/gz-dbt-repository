@@ -3,7 +3,7 @@
 SELECT 
 date_date,
 (operational_margin-ads_cost) AS ads_margin,
-avg_basket,
+ROUND(SUM(revenue)/NULLIF(COUNT(orders_id),0),1) AS avg_basket,
 operational_margin,
 ads_cost,
 ads_impression,
