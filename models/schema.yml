@@ -62,3 +62,14 @@ sources:
       - name: facebook
         identifier: raw_gz_facebook
         description: facebook ads data from greenweez
+
+models:
+  - name: int_campaigns
+    description: data from all campaigns
+    columns:
+      - name: paid_source
+        tests:
+          - not_null
+      - name: campaign_name
+        tests:
+          - not_null
