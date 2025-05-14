@@ -73,3 +73,17 @@ models:
       - name: campaign_name
         tests:
           - not_null
+  - name: int_campaigns_day
+    description: daily aggregated metrics from int_campaigns, grouped by date
+    columns:
+      - name: date_date
+        description: the date of the campaign activity
+        tests:
+          - not_null
+          - unique
+      - name: ads_cost
+        description: total ad spend for the day 
+      - name: ads_impression
+        description: total number of impressions for the day 
+      - name: ads_clicks 
+        description: total number of clicks on the day
